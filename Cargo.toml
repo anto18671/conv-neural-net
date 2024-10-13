@@ -1,0 +1,23 @@
+[package]
+name = "cnn_from_scratch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ndarray-rand = "0.15.0"
+rand = { version = "0.8.5", features = ["std"] }
+ndarray = { version = "0.16.1", features = ["rayon"] }
+image = { version = "0.25.2", default-features = false, features = ["jpeg"] }
+indicatif = "0.17.8"
+rayon = "1.10.0"
+
+# $env:RUSTFLAGS="-C target-cpu=native"
+# cargo run --release
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = false
+panic = 'abort'
+incremental = false
