@@ -162,12 +162,12 @@ These dependencies are specified in the `Cargo.toml` file:
 
 ```toml
 [dependencies]
-ndarray = { version = "0.15", features = ["rayon"] }
-ndarray-rand = "0.14"
-rand = "0.8"
-rayon = "1.5"
-indicatif = "0.16"
-image = "0.23"
+ndarray-rand = "0.15.0"
+rand = { version = "0.8.5", features = ["std"] }
+ndarray = { version = "0.16.1", features = ["rayon"] }
+image = { version = "0.25.2", default-features = false, features = ["jpeg"] }
+indicatif = "0.17.8"
+rayon = "1.10.0"
 ```
 
 ## License
